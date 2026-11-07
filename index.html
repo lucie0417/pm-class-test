@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日常清單 — 把今天，一件件完成</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23365c48'/%3E%3Cpath d='m8 16 5 5 11-12' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="workspace">
+    <header class="page-header">
+      <p class="eyebrow"><span aria-hidden="true">✳</span> 一點進度，一點從容</p>
+      <h1>日常清單<span aria-hidden="true">.</span></h1>
+      <p class="intro">把腦中的事放下，從一件小事開始。</p>
+    </header>
+    <section class="card" aria-labelledby="list-heading">
+      <div class="card-heading">
+        <h2 id="list-heading">我的待辦</h2>
+        <span class="badge">慢慢來，也很好</span>
+      </div>
+      <form id="todo-form" novalidate>
+        <label for="todo-input">下一件想完成的事</label>
+        <div class="input-row">
+          <input id="todo-input" type="text" placeholder="例如：散步、讀幾頁書…" autocomplete="off" aria-describedby="input-message">
+          <button class="add-button" type="submit"><span aria-hidden="true">＋</span> 新增</button>
+        </div>
+        <p id="input-message" class="input-message" role="status"></p>
+      </form>
+      <p id="storage-message" class="storage-message" role="status" hidden></p>
+      <ul id="todo-list" aria-label="待辦事項"></ul>
+      <div id="empty-state" class="empty-state">
+        <span class="empty-icon" aria-hidden="true">✓</span>
+        <p>留一點空間，給新的開始</p>
+        <span>在上方寫下第一件待辦吧。</span>
+      </div>
+      <p id="list-summary" class="list-summary" aria-live="polite">目前沒有待辦事項</p>
+    </section>
+    <footer>一步一步，都是前進。</footer>
+  </main>
+</body>
+</html>
